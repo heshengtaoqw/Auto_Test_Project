@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5069" started-at="2019-08-06T06:22:25Z" finished-at="2019-08-06T06:22:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5069" started-at="2019-08-06T06:22:25Z" finished-at="2019-08-06T06:22:30Z">
+      <class name="com.hst.testcase.LoginTest">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.hst.testcase.LoginTest@604ed9f0]" name="start" is-config="true" duration-ms="2811" started-at="2019-08-06T14:22:22Z" finished-at="2019-08-06T14:22:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="loginTest1()[pri:0, instance:com.hst.testcase.LoginTest@604ed9f0]" name="loginTest1" duration-ms="5057" started-at="2019-08-06T14:22:25Z" finished-at="2019-08-06T14:22:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest1 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:com.hst.testcase.LoginTest@604ed9f0]" name="end" is-config="true" duration-ms="2697" started-at="2019-08-06T14:22:30Z" finished-at="2019-08-06T14:22:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- com.hst.testcase.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
