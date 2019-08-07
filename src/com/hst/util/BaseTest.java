@@ -1,7 +1,5 @@
 package com.hst.util;
 
-
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -63,7 +61,7 @@ public class BaseTest {
 	
 	public static void switchWindows() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String currentWin = driver.getWindowHandle();
 			Set<String> AllWins = driver.getWindowHandles();
 			for(String i:AllWins) {

@@ -23,9 +23,6 @@ public class Browser {
 	  		System.setProperty("webdriver.gecko.driver", "D:\\selenium\\geckodriver.exe");
 	  		System.setProperty("webdriver.firefox.bin", "D:\\Program Files\\Mozilla Firefox\\firefox.exe");
 			driver = new FirefoxDriver();	
-			//driver.get(url);
-			//System.out.println("open blank page successfully");
-			//driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		} 
 		catch (Exception e) {
@@ -36,7 +33,6 @@ public class Browser {
 
 	public void tearDownBrowser() throws Exception {
 		try {
-			Thread.sleep(2000);
 			driver.quit();
 			System.out.println("close browser successfully");
 		} 

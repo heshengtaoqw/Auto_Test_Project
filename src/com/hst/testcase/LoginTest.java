@@ -11,8 +11,9 @@ import com.hst.util.*;
 
 public class LoginTest extends BaseTest{
 
-	DakaHomePage dakaHomePage = new DakaHomePage();
-	DakaLoginPage loginPage = new DakaLoginPage();
+	DakaHome dakaHomePage = new DakaHome();
+	DakaLogin loginPage = new DakaLogin();
+	WorkHome workHome = new WorkHome();
 	String username = null;
 	String password = null;
 	String verify_code=null;
@@ -24,13 +25,17 @@ public class LoginTest extends BaseTest{
 		
 		try {
 			dakaHomePage.click_EnterpriseLogin(driver);
-			loginPage.do_Login(driver, "111111", "1122222", "456489");
+			loginPage.do_Login(driver, "13923811009", "123456", "456489");
+			workHome.switch_iframe(driver);
+			workHome.click_workManage(driver);
+			workHome.click_meetingManage(driver);
+			workHome.click_createMeeting(driver);
+			Thread.sleep(10000);
 		} 
 		catch (Exception e) {
 			System.out.println(e);
 		}
-		
-		
+				
 		
 		/*
 		finally {
