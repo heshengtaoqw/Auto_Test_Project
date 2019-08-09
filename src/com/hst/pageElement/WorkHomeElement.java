@@ -10,8 +10,8 @@ public class WorkHomeElement {
 		public static final By workManage = By.xpath("//dt[contains(text(),'办公管理')]");
 		public static final By meetingManage = By.xpath("//dt[contains(text(),'会议管理')]");
 		public static final By createMeeting = By.xpath("//dd[contains(text(),'发起会议')]");
-		public static final By workFrameParent = By.xpath("//iframe[contains(@id,'_e_1')]");;
+		public static final By workArea = By.xpath("//iframe[contains(@id,'_e_1')]");;
 		//public static final String workFrameParent = "_e_1";
-		public static final By workFrameChild = By.xpath("//div[contains(@id,'_e_20')]/iframe");
+		public static final By workAreaChild = By.xpath("//div[contains(@id,'_e_20')]/iframe");
 		
 }

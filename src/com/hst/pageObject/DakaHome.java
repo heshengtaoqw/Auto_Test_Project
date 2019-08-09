@@ -17,7 +17,7 @@ public class DakaHome extends DakaHomeElement  {
 			//String s = "driver.findElement(DakaHomePageElement.enterpriseLoginButton).click()";
 			//js.executeScript(s);
 			SeleniumUtil.click(driver.findElement(DakaHomeElement.enterpriseLoginButton));
-			BaseTest.switchWindows();
+			SeleniumUtil.switchWindows();
 		}
 		catch(Exception e) {
 			e.printStackTrace();

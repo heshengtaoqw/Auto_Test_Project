@@ -34,10 +34,13 @@ public class BaseTest {
 		}
 	}
 	
-	@DataProvider(name = "login")  
-    public Object[][] dp() throws Exception {
-        return readCSV("D:\\login1.txt");    
-    }
+
+ 
+	@AfterSuite
+	public void end() throws Exception {
+		useBrowser.tearDownBrowser();
+	}
+	
 	
 	public static Object[][] readCSV(String fileName) throws Exception
 	  {
@@ -49,37 +52,24 @@ public class BaseTest {
 	            String fields[] =  record.split(",");  
 	            records.add(fields);                   
 	        }
-	        file.close();  //�ر��ļ�����
+	        file.close();  
 
 	        Object[][] results = new Object[records.size()][]; 
 	        for (int i=0; i<records.size();i++){            
 	            results[i] = records.get(i);               
 	        }
 	        return results;
-
 	  }
 	
-	public static void switchWindows() {
-		try {
-			Thread.sleep(1000);
-			String currentWin = driver.getWindowHandle();
-			Set<String> AllWins = driver.getWindowHandles();
-			for(String i:AllWins) {
-				if(currentWin.equals(i)) {
-					continue;
-				}
-				driver.switchTo().window(i);
-			}
-			System.out.println("switch window successfully");
-		} 
-		catch (Exception e) {
-			System.out.println("switch window failed: "+e);
-		}
-	}
-
- 
-	@AfterSuite
-	public void end() throws Exception {
-		useBrowser.tearDownBrowser();
-	}
+	@DataProvider(name = "login")  
+	  public Object[][] dp() throws Exception {
+	      return readCSV("D:\\login1.txt");    
+	  }
+		
+		
+	
+	
+	
+	
+	
 }

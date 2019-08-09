@@ -19,17 +19,15 @@ public class LoginTest extends BaseTest{
 	String verify_code=null;
 
 
-	@Test//(dataProvider = "login")
-	public void loginTest1() throws Exception{
+	@Test(dataProvider = "login")
+	public void loginTest1(String username,String password,String verify_code) throws Exception{
 		driver.get(dakaHomePage.dakaHomePageURL);
 		
 		try {
 			dakaHomePage.click_EnterpriseLogin(driver);
-			loginPage.do_Login(driver, "13923811009", "123456", "456489");
-			workHome.switch_iframe(driver);
-			workHome.click_workManage(driver);
-			workHome.click_meetingManage(driver);
-			workHome.click_createMeeting(driver);
+			loginPage.do_Login(driver, username, password, verify_code);
+			//driver.switchTo().defaultContent();//切换到原始登录状态下的html，每切换一个工作区域，都要先切换回最初状态
+			workHome.workArea_createMeeting(driver);
 			Thread.sleep(10000);
 		} 
 		catch (Exception e) {
