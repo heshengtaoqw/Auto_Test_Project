@@ -5,7 +5,7 @@
     <classes>
       <class name="com.hst.testcase.LoginTest">
         <methods>
-          <include name="loginTest1"/>
+          <include name="loginTest1" invocation-numbers="1"/>
           <include name="start"/>
           <include name="end"/>
         </methods>
