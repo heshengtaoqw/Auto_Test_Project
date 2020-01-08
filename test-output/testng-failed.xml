@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test1(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.hst.testcase.LoginTest">
         <methods>
-          <include name="loginTest1" invocation-numbers="1"/>
+          <include name="loginTest1"/>
           <include name="start"/>
           <include name="end"/>
         </methods>
       </class> <!-- com.hst.testcase.LoginTest -->
     </classes>
   </test> <!-- Test1(failed) -->
+  <test name="Test2(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.hst.testcase.LoginTest">
+        <methods>
+          <include name="loginTest1"/>
+          <include name="start"/>
+          <include name="end"/>
+        </methods>
+      </class> <!-- com.hst.testcase.LoginTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

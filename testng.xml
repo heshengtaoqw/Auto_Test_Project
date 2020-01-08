@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite"  thread-count="2">
+<suite name="Suite" parallel="tests" thread-count="2" >
+<parameter name="browser" value="chrome"/>  
 
   <test thread-count="5" name="Test1">	
+   <!--  <parameter name="nodeIp" value="http://192.168.99.100:5555/wd/hub/"/>  --> 
     <classes>
       <class name="com.hst.testcase.LoginTest"/>
 		<methods>
@@ -11,7 +13,22 @@
     </classes>
   </test> <!-- Test -->
   
-  <!--  
+<!--  
+    <test thread-count="5" name="Test2">	
+  	<parameter name="browser" value="firefox"/>  
+     <parameter name="nodeIp" value="http://192.168.99.100:5555/wd/hub/"/>  
+    <classes>
+      <class name="com.hst.testcase.LoginTest"/>
+		<methods>
+			<include name="loginTest1"/>
+		</methods> 
+    </classes>
+  </test>
+-->
+  
+  
+<!--  
+  <
   <test thread-count="5" name="Test2">	
     <classes>
       <class name="com.hst.testcase.LoginTest"/>
@@ -23,5 +40,5 @@
 		</methods> 
     </classes>
   </test> 
-  -->
+--> 
 </suite> <!-- Suite -->
