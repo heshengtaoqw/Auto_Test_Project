@@ -43,11 +43,9 @@ public class Browser {
 	  		}
 	  		*/
 	  		
-	  		
-			
 	  		driver = new FirefoxDriver();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			Thread.sleep(10000);
+	  		driver.get(url);
+
 		} 
 		catch (Exception e) {
 			System.out.println("open blank page failed, because: "+e);

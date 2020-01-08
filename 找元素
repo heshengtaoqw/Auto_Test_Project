@@ -1,6 +1,7 @@
 绝对路径  以 "/"  开头， 让xpath 从文档的根节点开始解析
 相对路径  以"//" 开头， 让xpath 从文档的任何元素节点开始解析
 
+
 findElement(By.id("kw"));
 findElement(By.xpath("//span[contains(text(),'��¼')]"))
 findElement(By.name(search_button_name))
@@ -13,9 +14,11 @@ findElement(By.xpath("//img[@alt='div1-img1']"))
 findElement(By.xpath("//*[text()='百度搜索']")
 findElement(By.xpath("//a[contains(text(),'搜索')]")
 find_element_by_xpath(".//*[@id='xx' and @name='xx']")
+findElement(By.xpath("//span[@class='soutu-btn']/input[@id='kw']"))
 10、模糊匹配以XX开头
 .//*[starts-with(@id,'xx')]
 .//*[starts-with(text(),'xx')]
+
 
 
 1. 有多个一样的ID的时候
