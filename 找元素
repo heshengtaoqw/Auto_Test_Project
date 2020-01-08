@@ -1,0 +1,39 @@
+绝对路径  以 "/"  开头， 让xpath 从文档的根节点开始解析
+相对路径  以"//" 开头， 让xpath 从文档的任何元素节点开始解析
+
+findElement(By.id("kw"));
+findElement(By.xpath("//span[contains(text(),'��¼')]"))
+findElement(By.name(search_button_name))
+findElement(By.xpath("//class='main_txt'/span[1]"))
+findElement(By.linkText("登录"))
+findElement(By.xpath("/html/body/div/input[@value='查询']")
+findElement(By.xpath("//input[@value='查询']"))
+findElement(By.xpath("//input[2]"))
+findElement(By.xpath("//img[@alt='div1-img1']"))
+findElement(By.xpath("//*[text()='百度搜索']")
+findElement(By.xpath("//a[contains(text(),'搜索')]")
+find_element_by_xpath(".//*[@id='xx' and @name='xx']")
+10、模糊匹配以XX开头
+.//*[starts-with(@id,'xx')]
+.//*[starts-with(text(),'xx')]
+
+
+1. 有多个一样的ID的时候
+By.xpath("//*[@id = 'as_add1']//input[@id='asetna']");
+http://www.cnblogs.com/qingchunjun/p/4208159.html
+
+2. 对于有auto-complete的输入框
+seleniumUtil.type(AddAssetsFixed.AS_ACCTBRNA, acctBRNA);
+seleniumUtil.type(AddAssetsFixed.AS_ACCTBRNA, Keys.ENTER);
+
+3. 对于read-only的输入框
+public void executeJS(String js) {
+((JavascriptExecutor) driver).executeScript(js);
+}
+seleniumUtil.executeJS("var setDate=document.getElementById(\"typena\");setDate.removeAttribute('readonly');");
+seleniumUtil.type(AddAssetsFixed.AS_TYPE, asTYPE);
+
+4. 特殊定位
+//button[contains(text(),'清空')]"
+
+5. 对于弹出框的方式，如果遇到元素找不到，可以打印当时的html出来 driver..getPageSource()，或者通过selenium IDE帮助定位元素

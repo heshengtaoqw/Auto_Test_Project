@@ -33,6 +33,7 @@ public class Browser {
 	  		System.setProperty("webdriver.firefox.bin", "D:\\Program Files\\Mozilla Firefox\\firefox.exe");
 	  		
 	  		//自动化分布式测试
+	  		/*
 	  		if(browser.equals("firefox")) {
 	  			driver = new RemoteWebDriver(new URL("nodeIp"), DesiredCapabilities.firefox());	
 	  		}else if(browser.equals("chrome")) {
@@ -40,9 +41,11 @@ public class Browser {
 	  		}else {
 	  			driver = new RemoteWebDriver(new URL("http://192.168.99.100:5555/wd/hub/"), DesiredCapabilities.internetExplorer());	
 	  		}
-	  			
+	  		*/
+	  		
+	  		
 			
-	  		//driver = new FirefoxDriver();
+	  		driver = new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			Thread.sleep(10000);
 		} 
